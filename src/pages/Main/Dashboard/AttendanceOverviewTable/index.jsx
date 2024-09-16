@@ -11,7 +11,7 @@ export const AttendanceOverviewTable = () => {
       <div className="d-flex align-items-center justify-content-between gap-xs">
         <h3>Attendance Overview</h3>
         <HMButton
-          onClick={() => navigate("/admin/attendance")}
+          onClick={() => navigate("/attendance")}
           size={"small"}
           variant={"default"}
         >

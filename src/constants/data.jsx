@@ -24,20 +24,10 @@ export const DashboardAsideMenu = [
     Icons.AllDepartments,
     "/all-departments"
   ),
-  getItem(
-    "Attendance",
-    "/attendance",
-    Icons.Attendance,
-    "/attendance"
-  ),
+  getItem("Attendance", "/attendance", Icons.Attendance, "/attendance"),
   getItem("Payroll", "/payroll", Icons.Payroll, "/payroll"),
   getItem("Jobs", "/jobs", Icons.Jobs, "/jobs"),
-  getItem(
-    "Candidates",
-    "/candidates",
-    Icons.Candidates,
-    "/candidates"
-  ),
+  getItem("Candidates", "/candidates", Icons.Candidates, "/candidates"),
   getItem("Leaves", "/leaves", Icons.Leaves, "/leaves"),
   getItem("Holidays", "/holidays", Icons.Holidays, "/holidays"),
   getItem("Settings", "/settings", Icons.Settings, "/settings"),
@@ -328,21 +318,30 @@ export const menuItems = [
   },
 ];
 
-
 export const scheduleData = [
   {
-      date: 'Wednesday, 06 July 2026',
-      events: [
-          { time: '09:30', title: 'Practical Task Review', role: 'UI/UX Designer' },
-          { time: '12:00', title: 'Resume Review', role: 'Magento Developer' },
-          { time: '01:30', title: 'Final HR Round', role: 'Sales Manager' },
-      ]
+    date: "2026-07-06",
+    time: "09:30",
+    title: "Practical Task Review",
+    role: "UI/UX Designer",
   },
   {
-      date: 'Thursday, 07 July 2026',
-      events: [
-          { time: '09:30', title: 'Practical Task Review', role: 'Front end Developer' },
-          { time: '11:00', title: 'TL Meeting', role: 'React JS' },
-      ]
-  }
+    date: "2026-07-06",
+    time: "12:00",
+    title: "Resume Review",
+    role: "Magento Developer",
+  },
+  {
+    date: "2026-07-06",
+    time: "01:30",
+    title: "Final HR Round",
+    role: "Sales Manager",
+  },
+  {
+    date: "2026-07-07",
+    time: "09:30",
+    title: "Practical Task Review",
+    role: "Front end Developer",
+  },
+  { date: "2026-07-07", time: "11:00", title: "TL Meeting", role: "React JS" },
 ];

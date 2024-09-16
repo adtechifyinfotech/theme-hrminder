@@ -37,8 +37,11 @@ const ThemeConfig = ({ children }) => {
           Button: {
             borderRadius: "var(--space-md)",
             controlHeight: "5.6rem",
+            controlHeightSM: "3.4rem",
             paddingInline: "var(--space-xl)",
+            paddingInlineSM: "var(--space-sm)",
             paddingBlock: "var(--space-xl)",
+            paddingBlockSM: "var(--space-sm)",
             contentFontSize: "var(--text-xl)",
             fontSize: "var(--text-xl)",
             defaultShadow: "none",
@@ -46,6 +49,8 @@ const ThemeConfig = ({ children }) => {
             dangerShadow: "none",
             onlyIconSize: "var(--icon)",
             defaultBorderColor: "rgba(var(--clr-gray-rgb),0.2)",
+            onlyIconSizeSM: 18,
+            borderRadiusSM: 5,
           },
           Breadcrumb: {
             itemColor: "rgb(255,255,255)",

@@ -1,15 +1,15 @@
 import { useTitle } from "@/App";
-import { HMTable } from "@/components";
-import { columns, data } from "@/constants";
+import { HMInput, HMTable } from "@/components";
+import { columns, data, Icons } from "@/constants";
+import styles from "./Attendance.module.css"
 
 export const Attendance = () => {
   const { setHeaderText } = useTitle();
   setHeaderText("Attendance");
   return (
     <div className="card">
-      <div></div>
+      <HMInput parentClassName={styles.Serach} placeholder={"Search"} prefix={Icons.Search} />
       <HMTable
-        // className={styles.AttendanceOverviewTable}
         tableDataSource={data.reverse()}
         tableColumn={columns}
         showPagination={true}

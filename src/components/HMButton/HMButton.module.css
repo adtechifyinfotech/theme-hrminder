@@ -5,3 +5,8 @@
   gap: var(--space-md);
   min-height: 40px;
 }
+
+.Button:global.ant-btn-sm {
+  /* width: 34px; */
+  min-height: unset;
+}

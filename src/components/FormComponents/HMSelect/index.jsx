@@ -5,6 +5,7 @@ import styles from "./HMSelect.module.css";
 
 export const HMSelect = ({
   id,
+  name,
   size,
   label,
   value,
@@ -49,6 +50,8 @@ export const HMSelect = ({
         </label>
       )}
       <Select
+        id={id}
+        name={name}
         options={options}
         value={value}
         onChange={onChange}

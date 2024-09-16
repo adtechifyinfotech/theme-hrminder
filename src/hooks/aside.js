@@ -13,6 +13,9 @@ export const Aside = () => {
       case "/all-employees":
         setCurrentPage("/all-employees");
         break;
+      case "/all-employees/add-new-employee":
+        setCurrentPage("/all-employees/add-new-employee");
+        break;
       case "/all-departments":
         setCurrentPage("/all-departments");
         break;

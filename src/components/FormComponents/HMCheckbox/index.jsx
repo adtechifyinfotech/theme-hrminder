@@ -7,6 +7,8 @@ export const HMCheckbox = ({
   className,
   children,
   checked,
+  id,
+  name,
   ...rest
 }) => {
   return (
@@ -15,6 +17,8 @@ export const HMCheckbox = ({
       onChange={onChange}
       className={className}
       disabled={disabled}
+      id={id}
+      name={name}
       // checked={checked}
       {...(checked && checked)}
       {...rest}
