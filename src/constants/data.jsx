@@ -11,36 +11,36 @@ function getItem(label, key, icon, path) {
 }
 
 export const DashboardAsideMenu = [
-  getItem("Dashboard", "/admin", Icons.Dashboard, "/admin"),
+  getItem("Dashboard", "/", Icons.Dashboard, "/"),
   getItem(
     "All Employees",
-    "/admin/all-employees",
+    "/all-employees",
     Icons.AllEmployees,
-    "/admin/all-employees"
+    "/all-employees"
   ),
   getItem(
     "All Departments",
-    "/admin/all-departments",
+    "/all-departments",
     Icons.AllDepartments,
-    "/admin/all-departments"
+    "/all-departments"
   ),
   getItem(
     "Attendance",
-    "/admin/attendance",
+    "/attendance",
     Icons.Attendance,
-    "/admin/attendance"
+    "/attendance"
   ),
-  getItem("Payroll", "/admin/payroll", Icons.Payroll, "/admin/payroll"),
-  getItem("Jobs", "/admin/jobs", Icons.Jobs, "/admin/jobs"),
+  getItem("Payroll", "/payroll", Icons.Payroll, "/payroll"),
+  getItem("Jobs", "/jobs", Icons.Jobs, "/jobs"),
   getItem(
     "Candidates",
-    "/admin/candidates",
+    "/candidates",
     Icons.Candidates,
-    "/admin/candidates"
+    "/candidates"
   ),
-  getItem("Leaves", "/admin/leaves", Icons.Leaves, "/admin/leaves"),
-  getItem("Holidays", "/admin/holidays", Icons.Holidays, "/admin/holidays"),
-  getItem("Settings", "/admin/settings", Icons.Settings, "/admin/settings"),
+  getItem("Leaves", "/leaves", Icons.Leaves, "/leaves"),
+  getItem("Holidays", "/holidays", Icons.Holidays, "/holidays"),
+  getItem("Settings", "/settings", Icons.Settings, "/settings"),
 ];
 
 function stylguideItem(label, key, path) {

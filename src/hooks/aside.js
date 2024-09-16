@@ -10,35 +10,32 @@ export const Aside = () => {
       case "/":
         setCurrentPage("/");
         break;
-      case "/admin":
-        setCurrentPage("/admin");
+      case "/all-employees":
+        setCurrentPage("/all-employees");
         break;
-      case "/admin/all-employees":
-        setCurrentPage("/admin/all-employees");
+      case "/all-departments":
+        setCurrentPage("/all-departments");
         break;
-      case "/admin/all-departments":
-        setCurrentPage("/admin/all-departments");
+      case "/attendance":
+        setCurrentPage("/attendance");
         break;
-      case "/admin/attendance":
-        setCurrentPage("/admin/attendance");
+      case "/payroll":
+        setCurrentPage("/payroll");
         break;
-      case "/admin/payroll":
-        setCurrentPage("/admin/payroll");
+      case "/jobs":
+        setCurrentPage("/jobs");
         break;
-      case "/admin/jobs":
-        setCurrentPage("/admin/jobs");
+      case "/candidates":
+        setCurrentPage("/candidates");
         break;
-      case "/admin/candidates":
-        setCurrentPage("/admin/candidates");
+      case "/leaves":
+        setCurrentPage("/leaves");
         break;
-      case "/admin/leaves":
-        setCurrentPage("/admin/leaves");
+      case "/holidays":
+        setCurrentPage("/holidays");
         break;
-      case "/admin/holidays":
-        setCurrentPage("/admin/holidays");
-        break;
-      case "/admin/settings":
-        setCurrentPage("/admin/settings");
+      case "/settings":
+        setCurrentPage("/settings");
         break;
       case "/styleguide":
         setCurrentPage("/styleguide");
