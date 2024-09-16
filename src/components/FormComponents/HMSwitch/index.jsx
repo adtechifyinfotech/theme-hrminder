@@ -1,6 +1,6 @@
-import { Switch } from "antd"
-import styles from "./HMSwitch.module.css"
-import clsx from "clsx"
+import { Switch } from "antd";
+import styles from "./HMSwitch.module.css";
+import clsx from "clsx";
 
 export const HMSwitch = ({
   wrapperClassName,
@@ -12,12 +12,16 @@ export const HMSwitch = ({
   disabled,
   label,
   loading,
+  id,
+  name,
   value,
   ...rest
 }) => {
   return (
     <div className={clsx(styles.switch, wrapperClassName)}>
       <Switch
+        id={id}
+        name={name}
         checked={checked}
         value={value}
         loading={loading}
@@ -29,5 +33,5 @@ export const HMSwitch = ({
       />
       <span className={clsx(labelClassName, "p-lg")}>{label}</span>
     </div>
-  )
-}
+  );
+};

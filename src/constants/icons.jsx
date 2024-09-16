@@ -347,4 +347,99 @@ export const Icons = {
       />
     </svg>
   ),
+  Calendar: (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 7.5C3 5.29086 4.79086 3.5 7 3.5H17C19.2091 3.5 21 5.29086 21 7.5V18C21 20.2091 19.2091 22 17 22H7C4.79086 22 3 20.2091 3 18V7.5Z"
+        stroke="#E25319"
+        strokeWidth="1.5"
+      />
+      <path
+        d="M3 9H21"
+        stroke="#E25319"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M8 2L8 5"
+        stroke="#E25319"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16 2V5"
+        stroke="#E25319"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="15" r="1" fill="#E25319" />
+      <circle cx="16" cy="15" r="1" fill="#E25319" />
+      <circle cx="8" cy="15" r="1" fill="#E25319" />
+    </svg>
+  ),
+  RightArrow: (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.5 11.9985L4.5 8.99853M4.5 8.99853L7.5 5.99853M4.5 8.99853L13.5 8.99853"
+        stroke="white"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  LeftArrow: (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.5 5.99951L13.5 8.99951M13.5 8.99951L10.5 11.9995M13.5 8.99951L4.5 8.99951"
+        stroke="white"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  Export: (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 6L12 2M12 2L16 6M12 2L12 16"
+        stroke="white"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M18.2454 9C19.3433 10.3696 20 12.1081 20 14C20 18.4183 16.4183 22 12 22C7.58172 22 4 18.4183 4 14C4 12.1081 4.65672 10.3696 5.75462 9"
+        stroke="white"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
 };

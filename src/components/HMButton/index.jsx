@@ -9,12 +9,16 @@ export const HMButton = ({
   className,
   children,
   onClick,
+  id,
+  name,
   variant,
   shape,
   ...rest
 }) => {
   return (
     <Button
+      id={id}
+      name={name}
       shape={shape}
       size={size}
       icon={icon}

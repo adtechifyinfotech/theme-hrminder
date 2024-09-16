@@ -37,7 +37,19 @@ const HRMinderRoute = createBrowserRouter(
           element: <DashboardLayout items={DashboardAsideMenu} />,
           children: [
             { index: true, element: <Dashboard /> },
-            { path: "all-employees", element: <AllEmployees /> },
+            {
+              path: "all-employees",
+              children: [
+                {
+                  index: true,
+                  element: <AllEmployees />,
+                },
+                {
+                  path: "add-new-employee",
+                  element: "Hello",
+                },
+              ],
+            },
             { path: "all-departments", element: <AllDepartments /> },
             { path: "attendance", element: <Attendance /> },
             { path: "payroll", element: <Payroll /> },

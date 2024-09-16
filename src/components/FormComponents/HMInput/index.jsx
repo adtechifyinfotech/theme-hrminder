@@ -4,6 +4,7 @@ import styles from "./HMInput.module.css";
 
 export const HMInput = ({
   id,
+  name,
   size,
   type = "text",
   label,
@@ -33,6 +34,7 @@ export const HMInput = ({
       )}
       <Input
         id={id}
+        name={name}
         type={type}
         size={size}
         value={value}

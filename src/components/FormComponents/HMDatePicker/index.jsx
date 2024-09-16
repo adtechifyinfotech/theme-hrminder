@@ -11,6 +11,7 @@ export const HMDatePicker = ({
   isInvalid,
   placeholder,
   errorMessage,
+  name,
   suffix = false,
   allowClear = true,
   parentClassName,
@@ -18,11 +19,14 @@ export const HMDatePicker = ({
 }) => {
   return (
     <div className={clsx(styles.datepickerWrap, parentClassName)}>
-      {label && <label htmlFor={id} className={styles.label}>
-        {label}
-      </label>}
+      {label && (
+        <label htmlFor={id} className={styles.label}>
+          {label}
+        </label>
+      )}
       <DatePicker
         id={id}
+        name={name}
         value={value}
         format={format}
         onChange={onChange}

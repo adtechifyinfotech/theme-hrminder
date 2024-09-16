@@ -1,39 +1,8 @@
 import { useState } from "react";
 import { Calendar, Badge } from "antd";
-import {
-  LeftOutlined,
-  RightOutlined,
-  CalendarOutlined,
-} from "@ant-design/icons";
 import dayjs from "dayjs";
-
-const scheduleData = [
-  {
-    date: "2026-07-06",
-    time: "09:30",
-    title: "Practical Task Review",
-    role: "UI/UX Designer",
-  },
-  {
-    date: "2026-07-06",
-    time: "12:00",
-    title: "Resume Review",
-    role: "Magento Developer",
-  },
-  {
-    date: "2026-07-06",
-    time: "01:30",
-    title: "Final HR Round",
-    role: "Sales Manager",
-  },
-  {
-    date: "2026-07-07",
-    time: "09:30",
-    title: "Practical Task Review",
-    role: "Front end Developer",
-  },
-  { date: "2026-07-07", time: "11:00", title: "TL Meeting", role: "React JS" },
-];
+import { Icons, scheduleData } from "@/constants";
+import { HMButton } from "@/components";
 
 export const MySchedule = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs("2026-07-06"));
@@ -73,24 +42,28 @@ export const MySchedule = () => {
     <div className="bg-dark text-white p-4" style={{ maxWidth: "400px" }}>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2 className="m-0">My Schedule</h2>
-        <CalendarOutlined style={{ fontSize: "24px", color: "#e67e22" }} />
+        <div>{Icons.Calendar}</div>
       </div>
       <Calendar
-        fullscreen={false}
+        // fullscreen={false}
         headerRender={({ value, onChange }) => {
           const current = value.clone();
           return (
             <div className="d-flex justify-content-between align-items-center">
-              <LeftOutlined
-                className="text-white-50"
+              <HMButton
+                size={"small"}
+                variant={"primary"}
                 onClick={() => onChange(current.clone().subtract(1, "month"))}
+                icon={Icons.RightArrow}
               />
               <div className="text-white fw-bold">
                 {current.format("MMMM, YYYY")}
               </div>
-              <RightOutlined
-                className="text-white-50"
+              <HMButton
+                size={"small"}
+                variant={"primary"}
                 onClick={() => onChange(current.clone().add(1, "month"))}
+                icon={Icons.LeftArrow}
               />
             </div>
           );
@@ -103,21 +76,6 @@ export const MySchedule = () => {
         <h5 className="mb-3">{selectedDate.format("dddd, DD MMMM YYYY")}</h5>
         {renderScheduleItems(selectedDate.format("YYYY-MM-DD"))}
       </div>
-      <style jsx>{`
-        .custom-calendar {
-          background-color: #1e1e1e;
-          border: none;
-        }
-        .custom-calendar .ant-picker-calendar-date {
-          color: white;
-        }
-        .custom-calendar .ant-picker-calendar-date-today {
-          background-color: #e67e22;
-        }
-        .custom-calendar .ant-picker-calendar-date-value {
-          color: white;
-        }
-      `}</style>
     </div>
   );
 };
