@@ -9,7 +9,9 @@ const columns = [
     key: "name",
     render: (text, record) => (
       <div style={{ display: "flex", alignItems: "center" }}>
-        <Avatar src={record.avatar} />
+        <Avatar src={record.avatar}>
+          {record.avatar ? record.avatar : text[0]}
+        </Avatar>
         <span style={{ marginLeft: "8px" }}>{text}</span>
       </div>
     ),
@@ -94,6 +96,7 @@ export const Candidates = () => {
         rowClassName={(record, index) =>
           index % 2 === 0 ? "even-row" : "odd-row"
         }
+        rowSelection={true}
       />
     </div>
   );

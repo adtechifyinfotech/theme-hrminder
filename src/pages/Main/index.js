@@ -8,3 +8,4 @@ export { Candidates } from "./Candidates";
 export { Leaves } from "./Leaves";
 export { Holidays } from "./Holidays";
 export { Settings } from "./Settings";
+export { Notifications } from "./Notifications";
