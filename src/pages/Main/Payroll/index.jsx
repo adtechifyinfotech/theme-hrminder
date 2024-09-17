@@ -1,8 +1,8 @@
+import clsx from "clsx";
 import { useTitle } from "@/App";
 import { HMButton, HMInput, HMTable } from "@/components";
 import { employeeColumns, employeeData, Icons } from "@/constants";
 import styles from "./Payroll.module.css";
-import clsx from "clsx";
 
 export const Payroll = () => {
   const { setHeaderText } = useTitle();

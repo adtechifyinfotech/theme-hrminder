@@ -198,6 +198,14 @@ export const employeeColumns = [
     title: "Employee Name",
     dataIndex: "name",
     key: "name",
+    render: (text) => (
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Avatar style={{ backgroundColor: "#87d068", marginRight: 8 }}>
+          {text[0]}
+        </Avatar>
+        {text}
+      </div>
+    ),
   },
   {
     title: "CTC",
@@ -213,6 +221,7 @@ export const employeeColumns = [
     title: "Deduction",
     dataIndex: "deduction",
     key: "deduction",
+    render: (text) => <>{text[0] ? text : "-"}</>,
   },
   {
     title: "Status",
@@ -233,7 +242,7 @@ export const employeeData = [
     name: "John Doe",
     ctc: "$50,000",
     salaryPerMonth: "$4,167",
-    deduction: "$200",
+    deduction: "",
     status: "Completed",
   },
   {

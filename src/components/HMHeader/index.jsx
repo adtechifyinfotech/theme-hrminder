@@ -1,13 +1,15 @@
-import { Avatar, Dropdown, Layout, Space } from "antd";
+import { Avatar, Dropdown, Layout } from "antd";
 import { useTitle } from "../../App";
 import clsx from "clsx";
-import { Icons, menuItems } from "@/constants";
+import { Icons } from "@/constants";
+import { useNavigate } from "react-router-dom";
+import { HMButton, HMInput } from "../";
 import styles from "./HMHeader.module.css";
-import { HMButton, HMDropdown, HMInput } from "../";
 
 const { Header } = Layout;
 
 export const HMHeader = () => {
+  const navigate = useNavigate();
   const { headerText } = useTitle();
   return (
     <Header
@@ -25,7 +27,10 @@ export const HMHeader = () => {
       </div>
       <div className="d-flex align-items-center justify-content-center gap-xl">
         <HMInput placeholder={"Search"} prefix={Icons.Search} />
-        <HMButton icon={Icons.NotificationBall} />
+        <HMButton
+          icon={Icons.NotificationBall}
+          onClick={() => navigate("/notification")}
+        />
         {/* <HMDropdown items={menuItems}>children</HMDropdown> */}
         <Dropdown
           overlayStyle={{
@@ -37,7 +42,7 @@ export const HMHeader = () => {
             onClick={(e) => e.preventDefault()}
             className="d-flex align-items-center justify-content-start gap-xs"
           >
-            <Avatar src="A" alt="Lucifer"  />
+            <Avatar src="A" alt="Lucifer" />
             <div className="d-flex flex-column">
               <span className="font-semibold p d-block lh-base clr-white">
                 Lucifer
