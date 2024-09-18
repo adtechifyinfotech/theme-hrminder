@@ -163,7 +163,7 @@ const HRMinderRoute = createBrowserRouter(
   ],
   {
     /* Base URL */
-    basename: "/theme-hrminder",
+    basename: "/hrminder",
   }
 );
 

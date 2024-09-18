@@ -32,7 +32,7 @@ const notifications = [
 
 export const Notifications = () => {
   return (
-    <div className="bg-dark text-white p-4 card">
+    <div className="bg-dark text-white p-4">
       <List
         itemLayout="horizontal"
         dataSource={notifications}
