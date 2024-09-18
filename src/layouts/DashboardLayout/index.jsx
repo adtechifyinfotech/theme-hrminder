@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Layout } from "antd";
 import { HMHeader, HMSidebar } from "@/components";
 import styles from "./DashboardLayout.module.css";
+import clsx from "clsx";
 
 const { Content } = Layout;
 
@@ -15,7 +16,7 @@ export const DashboardLayout = ({ items }) => {
       />
       <Layout>
         <HMHeader />
-        <Content className={styles.content}>
+        <Content className={clsx(styles.content, "card")}>
           <Outlet />
         </Content>
       </Layout>

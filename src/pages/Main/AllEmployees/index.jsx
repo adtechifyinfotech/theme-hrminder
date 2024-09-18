@@ -1,5 +1,4 @@
 import { useTitle } from "@/App";
-import { Link } from "react-router-dom";
 import { Tag, Avatar, Space } from "antd";
 import { EyeOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { HMInput, HMTable } from "@/components";
@@ -100,23 +99,18 @@ export const AllEmployees = () => {
   setHeaderText("All Employees");
   return (
     <>
-      <div>
-        <Link to={"/all-employees/add-new-employee"}>add-new-employee</Link>
-      </div>
-      <div className="card">
-        <div className="d-grid grid-columns">
-          <HMInput
-            parentClassName={styles.Serach}
-            placeholder={"Search"}
-            prefix={Icons.Search}
-          />
-        </div>
-        <HMTable
-          tableColumn={columns}
-          tableDataSource={data}
-          showPagination={true}
+      <div className="d-grid grid-columns">
+        <HMInput
+          parentClassName={styles.Serach}
+          placeholder={"Search"}
+          prefix={Icons.Search}
         />
       </div>
+      <HMTable
+        tableColumn={columns}
+        tableDataSource={data}
+        showPagination={true}
+      />
     </>
   );
 };

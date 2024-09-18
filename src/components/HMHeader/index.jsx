@@ -29,7 +29,7 @@ export const HMHeader = () => {
         <HMInput placeholder={"Search"} prefix={Icons.Search} />
         <HMButton
           icon={Icons.NotificationBall}
-          onClick={() => navigate("/notification")}
+          onClick={() => navigate("/notifications")}
         />
         {/* <HMDropdown items={menuItems}>children</HMDropdown> */}
         <Dropdown

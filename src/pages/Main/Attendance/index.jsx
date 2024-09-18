@@ -7,13 +7,13 @@ export const Attendance = () => {
   const { setHeaderText } = useTitle();
   setHeaderText("Attendance");
   return (
-    <div className="card">
+    <>
       <HMInput parentClassName={styles.Serach} placeholder={"Search"} prefix={Icons.Search} />
       <HMTable
         tableDataSource={data.reverse()}
         tableColumn={columns}
         showPagination={true}
       />
-    </div>
+    </>
   );
 };

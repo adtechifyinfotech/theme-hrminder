@@ -8,7 +8,7 @@ export const Payroll = () => {
   const { setHeaderText } = useTitle();
   setHeaderText("Payroll");
   return (
-    <div className="card">
+    <>
       <div className={clsx(styles.pageTop, "d-grid grid-columns")}>
         <HMInput
           parentClassName={styles.Serach}
@@ -22,6 +22,6 @@ export const Payroll = () => {
         </div>
       </div>
       <HMTable tableColumn={employeeColumns} tableDataSource={employeeData} />
-    </div>
+    </>
   );
 };

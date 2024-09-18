@@ -84,7 +84,7 @@ export const Candidates = () => {
   const { setHeaderText } = useTitle();
   setHeaderText("Candidates");
   return (
-    <div className="card">
+    <>
       <HMTable
         tableColumn={columns}
         tableDataSource={data}
@@ -98,6 +98,6 @@ export const Candidates = () => {
         }
         rowSelection={true}
       />
-    </div>
+    </>
   );
 };
