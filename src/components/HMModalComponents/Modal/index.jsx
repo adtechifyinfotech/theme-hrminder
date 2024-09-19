@@ -1,22 +1,23 @@
 import { Modal } from "antd";
 import { clsx } from "clsx";
-import { Icons } from "../../../constants";
-import styles from "./CHModal.module.css";
+import { Icons } from "@/constants";
+import styles from "./HMModal.module.css";
+import { HMButton } from "@/components";
 
-export const CHModal = (
-  {
-    open,
-    title,
-    width,
-    children,
-    className,
-    handleClose,
-    contentClassName,
-    closeOnOutsideClick,
-    ...rest
-  },
-  ref
-) => {
+export const HMModal = ({
+  open,
+  title,
+  width,
+  children,
+  className,
+  handleClose,
+  handleOk,
+  contentClassName,
+  closeOnOutsideClick,
+  handleContent,
+  IsFooter = false,
+  ...rest
+}) => {
   const finalClassName = {
     body: styles.body,
     content: clsx(styles.content, contentClassName),
@@ -30,11 +31,23 @@ export const CHModal = (
       classNames={finalClassName}
       rootClassName={styles.modalParent}
       open={open}
-      onCancel={handleClose}
       className={clsx(styles.modal, className)}
       title={title}
       maskClosable={closeOnOutsideClick}
       width={width}
+      footer={
+        IsFooter &&
+        (() => (
+          <div className="d-flex align-items-center gap-xl justify-content-center">
+            <HMButton block onClick={handleClose}>
+              Cancel
+            </HMButton>
+            <HMButton block variant={"primary"} onClick={handleOk}>
+              {handleContent}
+            </HMButton>
+          </div>
+        ))
+      }
       closeIcon={
         <div
           className={clsx(

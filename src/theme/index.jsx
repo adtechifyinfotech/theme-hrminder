@@ -80,18 +80,34 @@ const ThemeConfig = ({ children }) => {
             colorText: "rgb(255,255,255)",
           },
           Checkbox: {
-            colorBorder: "rgba(var(--clr-gray-rgb),0.2)",
+            colorBorder: "rgba(162,161,168,0.2)",
             colorPrimaryBorder: "rgb(226,83,25)",
             colorPrimary: "rgb(226,83,25)",
+            controlInteractiveSize: 20,
+            borderRadiusSM: 6,
           },
           Table: {
             footerColor: "rgb(19,19,19)",
             headerBg: "rgb(19,19,19)",
             borderColor: "rgba(var(--clr-gray-rgb),0.10196078431372549)",
+            rowSelectedBg: "rgba(var(--clr-gray-rgb),0.1)",
+            rowSelectedHoverBg: "rgba(var(--clr-gray-rgb),0.05)",
+            lineHeight: 1.57,
           },
           Calendar: {
             itemActiveBg: "rgb(226,83,25)",
             colorPrimary: "rgb(255,255,255)",
+          },
+          Tag: {
+            defaultColor: "rgb(226,83,25)",
+            defaultBg: "rgba(226,83,25,0.10196078431372549)",
+            fontSize: 12,
+          },
+          Modal: {
+            titleColor: "rgb(255,255,255)",
+            titleFontSize: 20,
+            fontHeight: 1.5,
+            colorBgMask: "rgba(0,0,0,0.7)",
           },
         },
       }}

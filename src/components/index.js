@@ -6,3 +6,4 @@ export { HMDropdown } from "./HMDropdown/";
 
 export * from "./FormComponents/";
 export * from "./HMCards/";
+export * from "./HMModalComponents/";
