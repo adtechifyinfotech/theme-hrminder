@@ -1,100 +1,11 @@
 import { useTitle } from "@/App";
-import { Tag, Avatar, Space } from "antd";
-import { EyeOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import { HMInput, HMTable } from "@/components";
+import { HMButton, HMInput, HMTable } from "@/components";
 import styles from "./AllEmployees.module.css";
-import { Icons } from "@/constants";
-
-const columns = [
-  {
-    title: "Employee Name",
-    dataIndex: "name",
-    key: "name",
-    render: (text, record) => (
-      <Space>
-        <Avatar src={record.avatar} />
-        <span>{text}</span>
-      </Space>
-    ),
-  },
-  {
-    title: "Employee ID",
-    dataIndex: "employeeId",
-    key: "employeeId",
-  },
-  {
-    title: "Department",
-    dataIndex: "department",
-    key: "department",
-  },
-  {
-    title: "Designation",
-    dataIndex: "designation",
-    key: "designation",
-  },
-  {
-    title: "Type",
-    dataIndex: "type",
-    key: "type",
-  },
-  {
-    title: "Status",
-    key: "status",
-    dataIndex: "status",
-    render: (status) => (
-      <Tag color="orange" key={status}>
-        {status.toUpperCase()}
-      </Tag>
-    ),
-  },
-  {
-    title: "Action",
-    key: "action",
-    render: () => (
-      <Space size="middle">
-        <EyeOutlined style={{ color: "white" }} />
-        <EditOutlined style={{ color: "white" }} />
-        <DeleteOutlined style={{ color: "white" }} />
-      </Space>
-    ),
-  },
-];
-
-const data = [
-  {
-    key: "1",
-    name: "Vasilisa",
-    avatar: "/placeholder.svg?height=32&width=32",
-    employeeId: "000666000",
-    department: "Design",
-    designation: "UI/UX Designer",
-    type: "Office",
-    status: "Permanent",
-  },
-  {
-    key: "2",
-    name: "Dina",
-    avatar: "/placeholder.svg?height=32&width=32",
-    employeeId: "000666000",
-    department: "Developement",
-    designation: "PHP Developer",
-    type: "Office",
-    status: "Permanent",
-  },
-  {
-    key: "3",
-    name: "Jack",
-    avatar: "/placeholder.svg?height=32&width=32",
-    employeeId: "000666000",
-    department: "Sales",
-    designation: "Sales Manager",
-    type: "Office",
-    status: "Permanent",
-  },
-  // Add more data entries here to match the image
-];
+import { AllEmployeesColumns, AllEmployeesData, Icons } from "@/constants";
+import { useNavigate } from "react-router-dom";
 
 export const AllEmployees = () => {
+  const navigate = useNavigate();
   const { setHeaderText } = useTitle();
   setHeaderText("All Employees");
   return (
@@ -105,10 +16,22 @@ export const AllEmployees = () => {
           placeholder={"Search"}
           prefix={Icons.Search}
         />
+        <div className="d-flex align-self-center justify-content-end gap-xl">
+          <HMButton
+            variant={"primary"}
+            icon={Icons.PlusWithBorder}
+            onClick={() => navigate("add-new-employee")}
+          >
+            Add New Employee
+          </HMButton>
+          <HMButton variant={"default"} icon={Icons.Filter}>
+            Filter
+          </HMButton>
+        </div>
       </div>
       <HMTable
-        tableColumn={columns}
-        tableDataSource={data}
+        tableColumn={AllEmployeesColumns}
+        tableDataSource={AllEmployeesData}
         showPagination={true}
       />
     </>

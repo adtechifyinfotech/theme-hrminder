@@ -13,8 +13,18 @@ export const Buttons = () => {
         <HMButton variant={"primary"}>Primary Button</HMButton>
       </div>
       <div className={styles.cardButton}>
+        <h2 className="mb-4">Button Small Size</h2>
+        <HMButton variant={"primary"} size={"small"}>
+          Primary Button
+        </HMButton>
+      </div>
+      <div className={styles.cardButton}>
         <h2 className="mb-4">Only Icon Button</h2>
         <HMButton variant={"primary"} icon={Icons.Settings} />
+      </div>
+      <div className={styles.cardButton}>
+        <h2 className="mb-4">Only Icon Small Button</h2>
+        <HMButton size={"small"} variant={"primary"} icon={Icons.Settings} />
       </div>
       <div className={styles.cardButton}>
         <h2 className="mb-4">Default Button</h2>
@@ -59,4 +69,3 @@ export const Buttons = () => {
     </>
   );
 };
-

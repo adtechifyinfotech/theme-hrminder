@@ -7,7 +7,13 @@ import { DashboardAsideMenu, StyleguideAsideMenu } from "@/constants";
 import { AuthLayout, DashboardLayout, StyleGuideLayout } from "@/layouts";
 
 /* */
-import { Buttons, CheckBox, FontFamily, Inputs } from "@/pages/Styleguide";
+import {
+  Buttons,
+  CheckBox,
+  FontFamily,
+  Inputs,
+  Modal,
+} from "@/pages/Styleguide";
 
 /* */
 import { ForgotPassword, Login, Otp } from "@/pages/Authentication";
@@ -139,7 +145,7 @@ const HRMinderRoute = createBrowserRouter(
         },
         {
           path: "modal",
-          element: <Buttons />,
+          element: <Modal />,
         },
         {
           path: "table",

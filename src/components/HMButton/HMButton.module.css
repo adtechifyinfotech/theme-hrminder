@@ -7,6 +7,5 @@
 }
 
 .Button:global.ant-btn-sm {
-  /* width: 34px; */
   min-height: unset;
 }
