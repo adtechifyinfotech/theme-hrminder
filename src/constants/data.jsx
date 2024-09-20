@@ -47,6 +47,7 @@ export const StyleguideAsideMenu = [
   stylguideItem("CheckBox", "/styleguide/checkbox", "checkbox"),
   stylguideItem("Modals", "/styleguide/modal", "modal"),
   stylguideItem("Table &  Pagination", "/styleguide/table", "table"),
+  stylguideItem("Icons", "/styleguide/icons", "icons"),
   stylguideItem("Tabs", "/styleguide/tabs", "tabs"),
   stylguideItem("Tags", "/styleguide/tags", "tags"),
 ];

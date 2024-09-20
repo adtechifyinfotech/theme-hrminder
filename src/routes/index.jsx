@@ -13,6 +13,7 @@ import {
   FontFamily,
   Inputs,
   Modal,
+  Icons,
 } from "@/pages/Styleguide";
 
 /* */
@@ -150,6 +151,10 @@ const HRMinderRoute = createBrowserRouter(
         {
           path: "table",
           element: <Buttons />,
+        },
+        {
+          path: "icons",
+          element: <Icons />,
         },
         {
           path: "tabs",
