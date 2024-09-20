@@ -1,11 +1,14 @@
 import { useTitle } from "@/App";
-import { HMButton, HMInput, HMTable } from "@/components";
+import { HMButton, HMInput, HMModal, HMTable } from "@/components";
 import styles from "./AllEmployees.module.css";
 import { AllEmployeesColumns, AllEmployeesData, Icons } from "@/constants";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { FilterModal } from "./FilterModal";
 
 export const AllEmployees = () => {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { setHeaderText } = useTitle();
   setHeaderText("All Employees");
   return (
@@ -24,7 +27,11 @@ export const AllEmployees = () => {
           >
             Add New Employee
           </HMButton>
-          <HMButton variant={"default"} icon={Icons.Filter}>
+          <HMButton
+            onClick={() => setIsModalOpen(true)}
+            variant={"default"}
+            icon={Icons.Filter}
+          >
             Filter
           </HMButton>
         </div>
@@ -34,6 +41,21 @@ export const AllEmployees = () => {
         tableDataSource={AllEmployeesData}
         showPagination={true}
       />
+
+      {/* Filter Modal */}
+      <HMModal
+        title={"Filter"}
+        width={383}
+        closeOnOutsideClick
+        open={isModalOpen}
+        handleOk={() => setIsModalOpen(false)}
+        handleClose={() => setIsModalOpen(false)}
+        handleCancel={() => setIsModalOpen(false)}
+        IsFooter
+        handleContent={"Apply"}
+      >
+        <FilterModal />
+      </HMModal>
     </>
   );
 };

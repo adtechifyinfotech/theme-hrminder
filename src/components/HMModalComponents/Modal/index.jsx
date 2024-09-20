@@ -1,8 +1,8 @@
 import { Modal } from "antd";
 import { clsx } from "clsx";
 import { Icons } from "@/constants";
-import styles from "./HMModal.module.css";
 import { HMButton } from "@/components";
+import styles from "./HMModal.module.css";
 
 export const HMModal = ({
   open,
@@ -14,7 +14,9 @@ export const HMModal = ({
   handleOk,
   contentClassName,
   closeOnOutsideClick,
+  handleCancel,
   handleContent,
+  IsCloseIcon = false,
   IsFooter = false,
   ...rest
 }) => {
@@ -33,6 +35,7 @@ export const HMModal = ({
       open={open}
       className={clsx(styles.modal, className)}
       title={title}
+      onCancel={handleCancel}
       maskClosable={closeOnOutsideClick}
       width={width}
       footer={
@@ -49,14 +52,16 @@ export const HMModal = ({
         ))
       }
       closeIcon={
-        <div
-          className={clsx(
-            styles.closeBtn,
-            "clr-black d-flex align-items-center"
-          )}
-        >
-          {Icons.CloseCircle}
-        </div>
+        IsCloseIcon && (
+          <div
+            className={clsx(
+              styles.closeBtn,
+              "clr-black d-flex align-items-center"
+            )}
+          >
+            {Icons.CloseCircle}
+          </div>
+        )
       }
       centered
       {...rest}

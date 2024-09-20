@@ -64,6 +64,9 @@ export const Aside = () => {
       case "/styleguide/tags":
         setCurrentPage("/styleguide/tags");
         break;
+      case "/styleguide/icons":
+        setCurrentPage("/styleguide/icons");
+        break;
       default:
         break;
     }

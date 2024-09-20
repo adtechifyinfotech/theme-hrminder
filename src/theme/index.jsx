@@ -85,6 +85,7 @@ const ThemeConfig = ({ children }) => {
             colorPrimary: "rgb(226,83,25)",
             controlInteractiveSize: 20,
             borderRadiusSM: 6,
+            paddingXS: 10,
           },
           Table: {
             footerColor: "rgb(19,19,19)",

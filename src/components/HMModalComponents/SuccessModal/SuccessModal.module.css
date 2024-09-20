@@ -7,4 +7,6 @@
   margin: auto;
   margin-bottom: var(--space-2xl);
   margin-top: var(--space-lg);
+  background-color: var(--clr-success);
+  border-radius: 50%;
 }

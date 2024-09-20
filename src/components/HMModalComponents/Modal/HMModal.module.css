@@ -1,9 +1,11 @@
 .content .header {
+  border-bottom: 1px solid rgba(var(--clr-gray-rgb), 0.1);
+  padding-bottom: var(--space-lg);
   margin-bottom: var(--space-2xl);
 }
 
 .modal .content {
-  padding: var(--space-2xl);
+  padding: var(--space-xl);
   border-radius: var(--space-xl);
 }
 
@@ -20,4 +22,9 @@
 .content .closeBtn svg {
   width: 100%;
   height: 100%;
+}
+
+
+.content .footer{
+  margin-top: 3rem;
 }
