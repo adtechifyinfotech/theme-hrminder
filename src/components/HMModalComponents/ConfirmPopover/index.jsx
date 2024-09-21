@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styles from "./CHConfirmPopover.module.css";
+import { useState } from "react";
 import { Popover, Space } from "antd";
 import { CHButton } from "../../CHFormComponents/CHButton";
 import clsx from "clsx";
+import styles from "./CHConfirmPopover.module.css";
 
 export const CHConfirmPopover = ({
   id,

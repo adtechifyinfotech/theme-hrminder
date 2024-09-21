@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Layout } from "antd";
 import { HMHeader, HMSidebar } from "@/components";
-import styles from "./DashboardLayout.module.css";
 import clsx from "clsx";
+import styles from "./DashboardLayout.module.css";
 
 const { Content } = Layout;
 

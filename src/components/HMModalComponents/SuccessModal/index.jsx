@@ -1,5 +1,5 @@
 import { HMModal } from "@/components";
-import { Icons } from "../../../constants";
+import { Icons } from "@/constants";
 import styles from "./SuccessModal.module.css";
 
 export const HMSuccessModal = ({ open, handleClose }) => {

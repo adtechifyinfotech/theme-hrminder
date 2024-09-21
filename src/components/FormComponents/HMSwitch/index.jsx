@@ -1,6 +1,6 @@
 import { Switch } from "antd";
-import styles from "./HMSwitch.module.css";
 import clsx from "clsx";
+import styles from "./HMSwitch.module.css";
 
 export const HMSwitch = ({
   wrapperClassName,

@@ -1,8 +1,8 @@
 import { Dropdown } from "antd";
 import clsx from "clsx";
 import { Icons } from "@/constants";
+import { HMButton } from "@/components/";
 import styles from "./HMDropdown.module.css";
-import { HMButton } from "../";
 
 export const HMDropdown = ({
   onClick,

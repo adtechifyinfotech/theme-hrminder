@@ -1,6 +1,6 @@
 import { Checkbox } from "antd";
-import styles from "./HMCheckbox.module.css"
 import clsx from "clsx";
+import styles from "./HMCheckbox.module.css"
 
 export const HMCheckbox = ({
   value,
