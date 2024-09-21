@@ -102,6 +102,7 @@ const ThemeConfig = ({ children }) => {
           Tag: {
             defaultColor: "rgb(226,83,25)",
             defaultBg: "rgba(226,83,25,0.10196078431372549)",
+            colorBorder: "rgba(226,83,25,0.10196078431372549)",
             fontSize: 12,
           },
           Modal: {

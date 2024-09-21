@@ -3,7 +3,7 @@ import { useTitle } from "../../App";
 import clsx from "clsx";
 import { Icons } from "@/constants";
 import { useNavigate } from "react-router-dom";
-import { HMButton, HMInput } from "../";
+import { HMButton, HMInput } from "@/components/";
 import styles from "./HMHeader.module.css";
 
 const { Header } = Layout;

@@ -1,0 +1,14 @@
+.Serach {
+  max-width: 330px;
+  margin-bottom: 3rem;
+}
+
+.FilterModalContentRadio,
+.FilterModalContent {
+  grid-gap: var(--space-lg);
+}
+
+.FilterModalContentCheckbox {
+  grid-column-gap: 3rem;
+  grid-row-gap: var(--space-lg);
+}

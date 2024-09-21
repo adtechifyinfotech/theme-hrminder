@@ -85,9 +85,22 @@ export const columns = [
     title: "Status",
     dataIndex: "status",
     key: "status",
-    render: (status) => (
-      <Tag color={status === "Late" ? "error" : "success"}>{status}</Tag>
-    ),
+    render: (status) => {
+      let color = "";
+      switch (status.toLowerCase()) {
+        case "on time":
+          color = "var(--clr-success)";
+          break;
+        case "late":
+          color = "var(--clr-error)";
+          break;
+      }
+      return (
+        <Tag color={color} key={status}>
+          {status.toUpperCase()}
+        </Tag>
+      );
+    },
   },
 ];
 
@@ -225,12 +238,25 @@ export const employeeColumns = [
     title: "Status",
     dataIndex: "status",
     key: "status",
-    render: (status) =>
-      status === "Completed" ? (
-        <Tag color="green">Completed</Tag>
-      ) : (
-        <Tag color="warning">Pending</Tag>
-      ),
+    render: (status) => {
+      let color = "";
+      switch (status.toLowerCase()) {
+        case "completed":
+          color = "var(--clr-success)";
+          break;
+        case "pending":
+          color = "var(--clr-alert)";
+          break;
+        case "progress":
+          color = "var(--clr-error)";
+          break;
+      }
+      return (
+        <Tag color={color} key={status}>
+          {status.toUpperCase()}
+        </Tag>
+      );
+    },
   },
 ];
 
@@ -392,11 +418,28 @@ export const AllEmployeesColumns = [
     title: "Status",
     key: "status",
     dataIndex: "status",
-    render: (status) => (
-      <Tag color="orange" key={status}>
-        {status.toUpperCase()}
-      </Tag>
-    ),
+    render: (status) => {
+      let color = "";
+      switch (status.toLowerCase()) {
+        case "permanent":
+          color = "var(--clr-success)";
+          break;
+        case "contract":
+          color = "var(--clr-primary)";
+          break;
+        case "notice":
+          color = "var(--clr-alert)";
+          break;
+        case "probation":
+          color = "var(--clr-error)";
+          break;
+      }
+      return (
+        <Tag color={color} key={status}>
+          {status.toUpperCase()}
+        </Tag>
+      );
+    },
   },
   {
     title: "Action",
@@ -419,7 +462,7 @@ export const AllEmployeesData = [
     department: "Design",
     designation: "UI/UX Designer",
     type: "Office",
-    status: "Permanent",
+    status: "permanent",
   },
   {
     key: "2",
@@ -429,7 +472,7 @@ export const AllEmployeesData = [
     department: "Development",
     designation: "PHP Developer",
     type: "Office",
-    status: "Permanent",
+    status: "contract",
   },
   {
     key: "3",
@@ -439,7 +482,7 @@ export const AllEmployeesData = [
     department: "Sales",
     designation: "Sales Manager",
     type: "Office",
-    status: "Permanent",
+    status: "notice",
   },
   {
     key: "4",
@@ -449,7 +492,7 @@ export const AllEmployeesData = [
     department: "Marketing",
     designation: "Digital Marketing Specialist",
     type: "Remote",
-    status: "Contract",
+    status: "probation",
   },
   {
     key: "5",

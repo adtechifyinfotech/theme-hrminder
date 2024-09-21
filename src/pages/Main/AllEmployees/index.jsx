@@ -1,10 +1,10 @@
 import { useTitle } from "@/App";
 import { HMButton, HMInput, HMModal, HMTable } from "@/components";
-import styles from "./AllEmployees.module.css";
 import { AllEmployeesColumns, AllEmployeesData, Icons } from "@/constants";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FilterModal } from "./FilterModal";
+import styles from "./AllEmployees.module.css";
 
 export const AllEmployees = () => {
   const navigate = useNavigate();

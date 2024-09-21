@@ -2,10 +2,10 @@ import { useTitle } from "@/App";
 import clsx from "clsx";
 import { DashboardCard } from "@/components";
 import { Icons } from "@/constants";
-import styles from "./Dashboard.module.css";
 import { AttendanceOverviewTable } from "./AttendanceOverviewTable";
 import { MySchedule } from "./MySchedule";
 import { AttendanceOverview } from "./AttendanceOverview";
+import styles from "./Dashboard.module.css";
 
 export const Dashboard = () => {
   const { setHeaderText } = useTitle();

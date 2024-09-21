@@ -8,7 +8,7 @@ export const AuthLayout = () => {
     <Layout
       className={clsx(
         styles.AuthWrapper,
-        "d-flex flex-column align-items-center justify-content-center vh-100"
+        "d-flex flex-column align-items-center justify-content-center vh-100 w-100 bg-black"
       )}
     >
       <Outlet />

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { Icons } from "@/constants";
-import styles from "../Authentication.module.css";
 import { HMButton, HMInputOtp } from "@/components";
+import styles from "../Authentication.module.css";
 
 export const Otp = () => {
   return (
