@@ -1,6 +1,5 @@
-import { Tabs, Tooltip } from "antd";
+import { Tabs } from "antd";
 import clsx from "clsx";
-import { Icons } from "../../constants";
 import styles from "./HMTabs.module.css";
 
 export const HMTabs = ({
@@ -9,74 +8,19 @@ export const HMTabs = ({
   onChange,
   className,
   extraContent,
-  theme = "white",
-  onTabRemove,
-  defaultActiveKey,
   tabPosition = "top",
   activeTabKey,
-  pinClickHandler,
   ...rest
 }) => {
-  const updatedItems = items.map((item) => {
-    if (item.isRemovable) {
-      return {
-        ...item,
-        label: (
-          <div className={"d-flex align-items-center"}>
-            <div className="d-flex align-items-center gap-2">
-              {true ? (
-                <button
-                  className={styles.removeTabBtn}
-                  onClick={pinClickHandler}
-                >
-                  {Icons.Pin}
-                </button>
-              ) : (
-                <button
-                  className={styles.removeTabBtn}
-                  onClick={pinClickHandler}
-                >
-                  {Icons.Unpin}
-                </button>
-              )}
-              {item.label}
-            </div>
-            <Tooltip title="Remove View">
-              <button
-                className={styles.removeTabBtn}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onTabRemove(item?.key);
-                }}
-              >
-                {Icons.CloseCircleFilled}
-              </button>
-            </Tooltip>
-          </div>
-        ),
-      };
-    } else {
-      return item;
-    }
-  });
-
   return (
     <Tabs
-      items={updatedItems}
+      items={items}
       defaultActiveKey={activeTabKey}
       activeKey={activeTabKey}
       onChange={onChange}
       tabBarExtraContent={extraContent}
       animated={animated}
-      className={clsx(
-        styles.tabs,
-        {
-          [styles.themeGray]: theme === "gray",
-          [styles.tabsTop]: tabPosition === "top",
-          [styles.tabsLeft]: tabPosition === "left",
-        },
-        className
-      )}
+      className={clsx(styles.tabs, className)}
       tabPosition={tabPosition}
       {...rest}
     />

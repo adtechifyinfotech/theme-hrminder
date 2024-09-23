@@ -14,6 +14,7 @@ import {
   Inputs,
   Modal,
   Icons,
+  Tabs,
 } from "@/pages/Styleguide";
 
 /* */
@@ -33,6 +34,7 @@ import {
   Holidays,
   Settings,
   Notifications,
+  AddNewEmployee,
 } from "@/pages/Main";
 
 const HRMinderRoute = createBrowserRouter(
@@ -57,7 +59,7 @@ const HRMinderRoute = createBrowserRouter(
                 },
                 {
                   path: "add-new-employee",
-                  element: "Hello",
+                  element: <AddNewEmployee />,
                 },
               ],
             },
@@ -158,7 +160,7 @@ const HRMinderRoute = createBrowserRouter(
         },
         {
           path: "tabs",
-          element: <FontFamily />,
+          element: <Tabs />,
         },
         {
           path: "tags",

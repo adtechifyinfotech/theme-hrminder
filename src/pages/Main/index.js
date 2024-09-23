@@ -1,5 +1,6 @@
 export { Dashboard } from "./Dashboard/";
 export { AllEmployees } from "./AllEmployees/";
+export { AddNewEmployee } from "./AddNewEmployee/";
 export { AllDepartments } from "./AllDepartments";
 export { Attendance } from "./Attendance/";
 export { Payroll } from "./Payroll";
