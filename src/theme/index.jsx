@@ -111,6 +111,9 @@ const ThemeConfig = ({ children }) => {
             fontHeight: 1.5,
             colorBgMask: "rgba(0,0,0,0.7)",
           },
+          Tabs: {
+            colorBorderSecondary: "rgba(162,161,168,0.2)",
+          },
         },
       }}
     >
